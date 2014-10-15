@@ -26,6 +26,7 @@
 // POSSIBILITY OF SUCH DAMAGE.
 //
 //*@@@---@@@@******************************************************************
+#include <bsd/string.h>
 #include <limits.h>
 #include <JXRGlue.h>
 

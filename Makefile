@@ -90,7 +90,7 @@ libjpegxr.a: $(OBJ_ENC) $(OBJ_DEC) $(OBJ_SYS)
 ## Glue files
 ##
 
-OBJ_GLUE=JXRGlue.o JXRMeta.o JXRGluePFC.o JXRGluejxr.o
+OBJ_GLUE=JXRGlue.o JXRMeta.o JXRGluePFC.o JXRGlueJxr.o
 
 $(OBJ_GLUE):
 	$(CC) $(CFLAGS) -I$(DIR_GLUE) -c $(DIR_GLUE)/$*.c
@@ -118,7 +118,7 @@ libjxrglue.a: $(OBJ_GLUE) $(OBJ_TEST)
 ## Enc app files
 ##
 
-LIBRARIES=libjxrglue.a libjpegxr.a
+LIBRARIES=libjxrglue.a libjpegxr.a -lbsd
 LIBS=-L. $(LIBRARIES)
 ENCAPP=JxrEncApp
 
